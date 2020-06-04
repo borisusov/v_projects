@@ -1,0 +1,13 @@
+---
+- name: Install default programs
+  hosts: gitlab 
+  become: yes
+
+
+  tasks:
+  - name: install mc
+    apt: name=mc state=latest
+
+  - name: install vim
+    apt: name=vim state=latest
+

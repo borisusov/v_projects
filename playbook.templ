@@ -1,0 +1,24 @@
+---
+- name: Install default programs
+  hosts: all
+  become: yes
+
+
+  tasks:
+  - name: install epel-release
+    yum: name=epel-release state=latest
+
+  - name: install openjdk-8-jdk
+    yum: name=openjdk-8-jdk state=latest
+
+  - name: install mc
+    yum: name=mc state=latest
+
+  - name: install vim
+    yum: name=vim state=latest
+
+  - name: install binutils 
+    yum: name=binutils  state=latest
+
+  - name: install htop
+    yum: name=htop state=latest  
